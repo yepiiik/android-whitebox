@@ -37,3 +37,17 @@ This repository will follow open-source architecture so that everyone can contri
     - Content of the course with next button
 5. Quiz screen with options (test-like as for v0.1.0).
     - Text question and option answer (as for v0.1.0)
+
+### Progress
+- [x] Initial commit | [commit](https://github.com/yepiiik/android-whitebox/commit/f2f45376c7a15932a18d09995b02646ea6b5d66c)
+- [ ] Create empty screens
+- [ ] Add navigation bar to navigate between them
+- [ ] Define course class structure  
+- [ ] Define module class structure
+- [ ] Define test class structure
+- [ ] Define user class structure
+- [ ] Implement hard-coded course
+- [ ] Implement hard-coded module
+- [ ] Implement hard-coded test
+- [ ] Implement hard-coded user screen
+- ...

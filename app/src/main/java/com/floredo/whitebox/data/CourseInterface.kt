@@ -1,0 +1,23 @@
+package com.floredo.whitebox.data
+
+enum class CourseTypes {
+    TECHNICAL,
+    HUMANITARIAN
+}
+
+enum class CourseLevel {
+    EASE,
+    MEDIUM,
+    HARD
+}
+
+
+interface CourseInterface {
+    val name: String
+    val description: String
+    val category: CourseTypes
+    val followers: Int
+    val isFollowed: Boolean
+    val modulesCount: Int
+    val level: CourseLevel
+}
