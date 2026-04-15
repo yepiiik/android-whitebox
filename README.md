@@ -16,7 +16,8 @@ This repository will follow open-source architecture so that everyone can contri
 4. **Local storage** and **database**. To ensure that personal progress is being saved and managed properly even offline local implementation is needed.
 
 ### More Tech
-1. Code - Kotlin
+1. Code - Kotlin (Android minSdk = 24,
+   targetSdk = 36)
 2. Requests - Redux
 3. Auth - Firebase
 4. LocalDB - SQLite, (potentially Realm for NoSQL)
@@ -40,8 +41,8 @@ This repository will follow open-source architecture so that everyone can contri
 
 ### Progress
 - [x] Initial commit | [commit](https://github.com/yepiiik/android-whitebox/commit/f2f45376c7a15932a18d09995b02646ea6b5d66c)
-- [ ] Create empty screens
-- [ ] Add navigation bar to navigate between them
+- [x] Create empty screens | [current commit]
+- [x] Add navigation bar to navigate between them | [current commit]
 - [ ] Define course class structure  
 - [ ] Define module class structure
 - [ ] Define test class structure
