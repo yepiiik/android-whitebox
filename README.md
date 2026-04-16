@@ -41,14 +41,17 @@ This repository will follow open-source architecture so that everyone can contri
 
 ### Progress
 - [x] Initial commit | [commit](https://github.com/yepiiik/android-whitebox/commit/f2f45376c7a15932a18d09995b02646ea6b5d66c)
-- [x] Create empty screens | [current commit]
-- [x] Add navigation bar to navigate between them | [current commit]
-- [ ] Define course class structure  
-- [ ] Define module class structure
-- [ ] Define test class structure
-- [ ] Define user class structure
-- [ ] Implement hard-coded course
-- [ ] Implement hard-coded module
-- [ ] Implement hard-coded test
-- [ ] Implement hard-coded user screen
+- [x] Create empty screens | [commit](https://github.com/yepiiik/android-whitebox/commit/d6e7f2de95d7170414d5356a58ea97db1cefa0d0)
+- [x] Add navigation bar to navigate between them | [commit](https://github.com/yepiiik/android-whitebox/commit/d6e7f2de95d7170414d5356a58ea97db1cefa0d0)
+- [x] Define course class structure | [current]
+- [x] Define module class structure | [current]
+- [x] Define quiz class structure | [current]
+- [x] Define user class structure | [current]
+- [x] Implement hard-coded course | [current]
+- [x] Implement hard-coded module | [current]
+- [x] Implement hard-coded quiz | [current]
+- [ ] Implement hard-coded home screen 
+- [ ] Implement hard-coded profile screen
+- [ ] Implement hard-coded explore screen
+- [ ] Generate realistic mock data
 - ...

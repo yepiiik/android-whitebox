@@ -1,5 +1,9 @@
 package com.floredo.whitebox.ui.navigation
 
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AccountCircle
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.ui.graphics.vector.ImageVector
 
 sealed class Screen(
@@ -8,9 +12,9 @@ sealed class Screen(
     val icon: ImageVector? = null
 ) {
     // Bottom Nav Screens
-    object Home : Screen("home")
-    object Explore : Screen("explore")
-    object Profile : Screen("profile")
+    object Home : Screen("home", "Home", Icons.Default.Home)
+    object Explore : Screen("explore","Explore", Icons.Default.Search)
+    object Profile : Screen("profile", "Profile", Icons.Default.AccountCircle)
 
     // Full Screen (No Nav)
     object Module : Screen("module/{moduleId}") {

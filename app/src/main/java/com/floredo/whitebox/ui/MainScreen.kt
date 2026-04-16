@@ -1,6 +1,7 @@
 package com.floredo.whitebox.ui
 
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
@@ -10,11 +11,11 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.floredo.whitebox.ui.components.AppBottomBar
 import com.floredo.whitebox.ui.navigation.Screen
+import com.floredo.whitebox.ui.navigation.mainNavGraph
 
 @Composable
 fun MainScreen() {
@@ -45,38 +46,10 @@ fun MainScreen() {
         // 5. Build the Navigation Map
         NavHost(
             navController = navController,
-            startDestination = Screen.Home.route,
-            modifier = Modifier.padding(innerPadding) // Prevents UI from hiding under the bottom bar
+            startDestination = "main_route", // Use the route name from mainNavGraph
+            modifier = Modifier.padding(innerPadding)
         ) {
-
-            // MAIN SCREENS
-            composable(Screen.Home.route) {
-                PlaceholderScreen("Home Screen") // Replace with actual HomeScreen later
-            }
-            composable(Screen.Explore.route) {
-                PlaceholderScreen("Explore Screen")
-            }
-            composable(Screen.Profile.route) {
-                PlaceholderScreen("Profile Screen")
-            }
-
-            // DETAIL SCREENS (No bottom bar)
-            composable(Screen.Module.route) { backStackEntry ->
-                val moduleId = backStackEntry.arguments?.getString("moduleId")
-                PlaceholderScreen("Module ID: $moduleId")
-            }
-            composable(Screen.Quiz.route) { backStackEntry ->
-                val quizId = backStackEntry.arguments?.getString("quizId")
-                PlaceholderScreen("Quiz ID: $quizId")
-            }
+            mainNavGraph(navController)
         }
-    }
-}
-
-// A temporary helper component so you can test navigation immediately
-@Composable
-fun PlaceholderScreen(title: String) {
-    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Text(text = title)
     }
 }

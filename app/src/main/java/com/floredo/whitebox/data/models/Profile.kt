@@ -1,5 +1,7 @@
 package com.floredo.whitebox.data.models
 
 data class Profile(
-    val id: String
+    val username: String,
+    val courseListIds: List<String>,
+    val displayName: String?,
 )
