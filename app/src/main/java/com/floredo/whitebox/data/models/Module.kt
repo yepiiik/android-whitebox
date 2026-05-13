@@ -9,4 +9,5 @@ data class Module(
     val content: List<Any>,
     val courseId: String,
     val description: String?,
+    val referenceModulesId: List<String>
 )

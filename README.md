@@ -43,15 +43,20 @@ This repository will follow open-source architecture so that everyone can contri
 - [x] Initial commit | [commit](https://github.com/yepiiik/android-whitebox/commit/f2f45376c7a15932a18d09995b02646ea6b5d66c)
 - [x] Create empty screens | [commit](https://github.com/yepiiik/android-whitebox/commit/d6e7f2de95d7170414d5356a58ea97db1cefa0d0)
 - [x] Add navigation bar to navigate between them | [commit](https://github.com/yepiiik/android-whitebox/commit/d6e7f2de95d7170414d5356a58ea97db1cefa0d0)
-- [x] Define course class structure | [current]
-- [x] Define module class structure | [current]
-- [x] Define quiz class structure | [current]
-- [x] Define user class structure | [current]
-- [x] Implement hard-coded course | [current]
-- [x] Implement hard-coded module | [current]
-- [x] Implement hard-coded quiz | [current]
+- [x] Define course class structure | [commit](https://github.com/yepiiik/android-whitebox/commit/677614c238329b569b028d387c42d0021819a91a)
+- [x] Define module class structure | [commit](https://github.com/yepiiik/android-whitebox/commit/677614c238329b569b028d387c42d0021819a91a)
+- [x] Define quiz class structure | [commit](https://github.com/yepiiik/android-whitebox/commit/677614c238329b569b028d387c42d0021819a91a)
+- [x] Define user class structure | [commit](https://github.com/yepiiik/android-whitebox/commit/677614c238329b569b028d387c42d0021819a91a)
+- [x] Implement hard-coded course | [commit](https://github.com/yepiiik/android-whitebox/commit/677614c238329b569b028d387c42d0021819a91a)
+- [x] Implement hard-coded module | [commit](https://github.com/yepiiik/android-whitebox/commit/677614c238329b569b028d387c42d0021819a91a)
+- [x] Implement hard-coded quiz | [commit](https://github.com/yepiiik/android-whitebox/commit/677614c238329b569b028d387c42d0021819a91a)
 - [ ] Implement hard-coded home screen 
 - [ ] Implement hard-coded profile screen
 - [ ] Implement hard-coded explore screen
+- [ ] Implement module reference system
+- [ ] Develop markdown component
 - [ ] Generate realistic mock data
+- [ ] Connect local database
+- [ ] Connect firebase auth
 - ...
+- v0.1.0 checkpoint (aka. MVP)
