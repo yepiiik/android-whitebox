@@ -9,6 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.floredo.whitebox.ui.components.QuizComponent
+import com.floredo.whitebox.ui.components.SuccessGreen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -18,7 +19,8 @@ fun QuizScreen(
     viewModel: QuizViewModel
 ) {
     val quiz by viewModel.quiz
-    var quizResult by remember { mutableStateOf<String?>(null) }
+    var selectedAnswerIndex by remember(quizId) { mutableStateOf<Int?>(null) }
+    var quizResult by remember(quizId) { mutableStateOf<String?>(null) }
 
     LaunchedEffect(quizId) {
         viewModel.loadQuiz(quizId)
@@ -42,10 +44,13 @@ fun QuizScreen(
                 .padding(paddingValues)
                 .padding(16.dp)
         ) {
-            quiz?.let {
+            quiz?.let { currentQuiz ->
                 QuizComponent(
-                    quiz = it,
-                    onAnswerSelected = { isCorrect ->
+                    quiz = currentQuiz,
+                    selectedAnswerIndex = selectedAnswerIndex,
+                    onAnswerSelected = { index ->
+                        selectedAnswerIndex = index
+                        val isCorrect = currentQuiz.answers[index].isCorrect
                         quizResult = if (isCorrect) "Correct! 🎉" else "Try again! ❌"
                     }
                 )
@@ -55,7 +60,7 @@ fun QuizScreen(
                         text = result,
                         style = MaterialTheme.typography.titleMedium,
                         color = if (result.contains("Correct"))
-                            MaterialTheme.colorScheme.primary
+                            SuccessGreen
                         else
                             MaterialTheme.colorScheme.error,
                         modifier = Modifier.padding(top = 16.dp)

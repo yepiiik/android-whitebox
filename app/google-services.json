@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "873225415946",
+    "project_id": "whitebox-floredo",
+    "storage_bucket": "whitebox-floredo.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:873225415946:android:b343fecd6e3347ea365ef3",
+        "android_client_info": {
+          "package_name": "com.floredo.whitebox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "873225415946-htgf3nq5grp16jgigfrog85742b7sn93.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.floredo.whitebox",
+            "certificate_hash": "c5c62f8fe5d6751ad05d4b7f7b7141f99ce2b428"
+          }
+        },
+        {
+          "client_id": "873225415946-4n953jf81esohpqorisbugqvbhr9i78k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1U93WvvUCNuRjE2wEmm71YeeGnvjVoYA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "873225415946-4n953jf81esohpqorisbugqvbhr9i78k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -17,11 +17,15 @@ import com.floredo.whitebox.ui.screens.main.home.HomeScreen
 import com.floredo.whitebox.ui.screens.main.explore.ExploreScreen
 import com.floredo.whitebox.ui.screens.main.profile.ProfileScreen
 
+import com.floredo.whitebox.ui.screens.login.LoginScreen
+import com.floredo.whitebox.ui.screens.login.LoginViewModel
+
 fun NavGraphBuilder.mainNavGraph(navController: NavController) {
     navigation(startDestination = "home", route = "main_route") {
         composable("home") { HomeScreen(navController) }
         composable("explore") { ExploreScreen(navController) }
         composable("profile") { ProfileScreen(navController) }
+        composable("login") { LoginScreen(navController) }
 
         composable(
             route = Screen.Course.route,

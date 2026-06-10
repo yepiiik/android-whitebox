@@ -1,10 +1,9 @@
 package com.floredo.whitebox.data.models
 
-import androidx.compose.ui.text.LinkAnnotation
-
 enum class CourseTypes {
     TECHNICAL,
-    HUMANITARIAN
+    HUMANITARIAN,
+    SCIENCE
 }
 
 enum class CourseLevel {
@@ -14,13 +13,13 @@ enum class CourseLevel {
 }
 
 data class Course(
-    val id: String,
-    val name: String,
-    val followers: Int,
-    val isFollowed: Boolean,
-    val modulesCount: Int,
-    val level: CourseLevel,
-    val description: String?,
-    val category: CourseTypes?,
-    val thumbnailUrl: LinkAnnotation.Url
+    val id: String = "",
+    val name: String = "",
+    val followers: Int = 0,
+    val isFollowed: Boolean = false,
+    val modulesCount: Int = 0,
+    val level: CourseLevel = CourseLevel.EASY,
+    val description: String? = null,
+    val category: CourseTypes? = null,
+    val thumbnailUrl: String = ""
 )

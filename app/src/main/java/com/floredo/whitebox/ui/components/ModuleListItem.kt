@@ -2,6 +2,7 @@ package com.floredo.whitebox.ui.components
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -14,13 +15,17 @@ import com.floredo.whitebox.data.models.Module
 fun ModuleListItem(
     module: Module,
     onModuleClick: (Module) -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    isCompleted: Boolean = false
 ) {
     Surface(
         onClick = { onModuleClick(module) },
         modifier = modifier.fillMaxWidth(),
         shape = MaterialTheme.shapes.medium,
-        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
+        color = if (isCompleted) 
+            MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f)
+        else 
+            MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
     ) {
         Row(
             modifier = Modifier
@@ -29,9 +34,9 @@ fun ModuleListItem(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Icon(
-                imageVector = Icons.Default.PlayArrow,
+                imageVector = if (isCompleted) Icons.Default.CheckCircle else Icons.Default.PlayArrow,
                 contentDescription = null,
-                tint = MaterialTheme.colorScheme.primary
+                tint = if (isCompleted) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.secondary
             )
             Spacer(modifier = Modifier.width(16.dp))
             Column(modifier = Modifier.weight(1f)) {
@@ -48,7 +53,7 @@ fun ModuleListItem(
                 }
             }
             Text(
-                text = "${module.approximateTime}", // Simple display for now
+                text = "${module.approximateTimeMillis / 60000} min", // Simple display for now
                 style = MaterialTheme.typography.labelMedium
             )
         }

@@ -50,13 +50,13 @@ This repository will follow open-source architecture so that everyone can contri
 - [x] Implement hard-coded course | [commit](https://github.com/yepiiik/android-whitebox/commit/677614c238329b569b028d387c42d0021819a91a)
 - [x] Implement hard-coded module | [commit](https://github.com/yepiiik/android-whitebox/commit/677614c238329b569b028d387c42d0021819a91a)
 - [x] Implement hard-coded quiz | [commit](https://github.com/yepiiik/android-whitebox/commit/677614c238329b569b028d387c42d0021819a91a)
-- [ ] Implement hard-coded home screen 
-- [ ] Implement hard-coded profile screen
-- [ ] Implement hard-coded explore screen
-- [ ] Implement module reference system
-- [ ] Develop markdown component
-- [ ] Generate realistic mock data
-- [ ] Connect local database
-- [ ] Connect firebase auth
-- ...
-- v0.1.0 checkpoint (aka. MVP)
+- [x] Implement hard-coded home screen 
+- [x] Implement hard-coded profile screen
+- [x] Implement hard-coded explore screen
+- [x] Implement module reference system
+- [x] Develop markdown component
+- [x] Generate realistic mock data
+- [x] Connect local database (Room implementation)
+- [x] Connect Firebase (Auth & Firestore)
+- [x] Fix quiz validation and mapping logic
+- [x] v1.0.0 - Core functionality and interactive course loop completed
